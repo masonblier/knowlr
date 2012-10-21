@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Knowlr</title>
+  <link rel='stylesheet' href='/css/bootstrap.css'>
+  <link rel='stylesheet' href='/css/style.css'>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="pull-left">
+      <ul class="nav nav-pills">
+        <% if @session?.user?: %>
+        <li class="nav-account">
+          <a class="pill" href="/account"><%= @session.user.username %></a>
+        </li>
+        <li class="nav-user-dropdown">
+          <div class="btn-group">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="icon-chevron-down icon-white"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+        <% else: %>
+        <li><a class="pill" href="/login">Login</a></li>
+        <% end %>
+        <li><a class="pill" href="/profiles">Browse</a></li>
+      </ul>
+    </div>
+    <div class="pull-right">
+      <a href="/"><img src="/img/header.png" id="brand" alt="Knowlr" width="180" height="60" /></a>
+    </div>
+  </div>
+
+  <div id="app" class="container">
+    <%- @body %>
+  </div>
+
+  <footer class="container">
+    <hr />
+    <ul class="footer-links">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Terms and Conditions</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li class="pull-right"><a href="#">Back to top</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

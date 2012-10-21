@@ -1,0 +1,19 @@
+{
+  "name": "knowlr",
+  "version": "0.1.0",
+  "author": "masonblier",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "fibers":"latest",
+    "ace": "git://github.com/maccman/ace.git#master",
+    "coffee-script": "latest",
+    "eco": "latest",
+    "mongo-model":"latest",
+    "underscore":"latest"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}

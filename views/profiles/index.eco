@@ -1,0 +1,28 @@
+<div class="row">
+  <ul class="breadcrumb span12">
+    <li><a href="/profiles">Profiles</a>
+  </ul>
+</div>
+
+<div class="span12 page-header">
+  <h2>All Profiles</h2>
+</div>
+
+<div class="row">
+  <table class="table span12">
+    <thead>
+      <tr>
+        <th class="span2">Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% for profile in @profiles: %>
+      <tr>
+        <td><%= profile.type %></td>
+        <td><a href="/profiles/<%= profile._id %>"><%= profile.name %></a></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

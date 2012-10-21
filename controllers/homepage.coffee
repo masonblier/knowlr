@@ -1,0 +1,2 @@
+app.get '/', ->
+  @eco 'homepage'

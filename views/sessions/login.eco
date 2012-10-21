@@ -1,0 +1,26 @@
+<div class="row">
+  <form class="form-horizontal" method="post">
+    <legend>Sign in</legend>
+    <% if @error?: %>
+    <div class="alert alert-error"><%= @error %></div>
+    <% end %>
+    <div class="control-group">
+      <label for="inputUsername" class="control-label">Username</label>
+      <div class="controls">
+        <input type="text" id="inputUsername" name="username">
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="inputPassword" class="control-label">Password</label>
+      <div class="controls">
+        <input type="password" id="inputPassword" name="password">
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <button class="btn btn-info" type="submit"><i class="icon-pencil icon-white"></i> Sign in</button>
+        <button class="btn" name="register" value="true"><i class="icon-user"></i> Register</button>
+      </div>
+    </div>
+  </form>
+</div>

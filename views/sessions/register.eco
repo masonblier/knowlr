@@ -1,0 +1,31 @@
+<div class="row">
+  <form class="form-horizontal" method="post" action="/register">
+    <legend>Register</legend>
+    <% if @errors? and @errors.length > 0: %>
+    <div class="alert alert-error"><%- @errors.join("<br />") %></div>
+    <% end %>
+    <div class="control-group">
+      <label for="inputUsername" class="control-label">Username</label>
+      <div class="controls">
+        <input type="text" id="inputUsername" name="username" value="<%= @username if @username? %>" />
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="inputPassword" class="control-label">Password</label>
+      <div class="controls">
+        <input type="password" id="inputPassword" name="password">
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="inputPasswordConfirm" class="control-label">Confirm Password</label>
+      <div class="controls">
+        <input type="password" id="inputPasswordConfirm" name="passwordConfirm">
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <button class="btn" type="submit">Register</button>
+      </div>
+    </div>
+  </form>
+</div>
