@@ -1,0 +1,15 @@
+<div class="row">
+  <ul class="breadcrumb span12">
+    <li><a href="/objects">Objects</a> <span class="divider">/</span></li>
+    <li><a href="/objects/<%= @knowl._id %>"><%= @knowl.name %></a>
+  </ul>
+</div>
+
+<div class="span12 page-header">
+  <h2><%= @knowl.name %></h2>
+</div>
+<div class="row">
+  <div class="span4 offset2">
+    <img src="http://placehold.it/280x300.png" alt="image" />
+  </div>
+</div>

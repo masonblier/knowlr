@@ -26,7 +26,7 @@
         <% else: %>
         <li><a class="pill" href="/login">Login</a></li>
         <% end %>
-        <li><a class="pill" href="/profiles">Browse</a></li>
+        <li><a class="pill" href="/objects">Browse</a></li>
       </ul>
     </div>
     <div class="pull-right">

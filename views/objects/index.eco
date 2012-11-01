@@ -1,0 +1,32 @@
+<div class="row">
+  <ul class="breadcrumb span12">
+    <li><a href="/objects">Public Objects</a>
+  </ul>
+</div>
+
+<div class="span12 page-header">
+  <h2>Public Objects</h2>
+</div>
+
+<div class="row">
+  <% if @knowls?.length and @knowls.length > 0: %>
+  <table class="table span12">
+    <thead>
+      <tr>
+        <th class="span2">Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for knowl in @knowls: %>
+      <tr>
+        <td>type</td>
+        <td><a href="/objects/<%= knowl._id %>"><%= knowl.name %></a></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% else: %>
+  <p class="lead span12">No public objects</p>
+  <% end %>
+</div>
