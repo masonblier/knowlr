@@ -29,4 +29,9 @@
   <% else: %>
   <p class="lead span12">No public objects</p>
   <% end %>
+  <div class="form-actions span12">
+    <a href="/objects/new" class="btn btn-info span3">
+      <i class="icon-asterisk icon-white"></i> New Public Object
+    </a>
+  </div>
 </div>

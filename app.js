@@ -13,6 +13,9 @@ var sync = function() {
   require("fs").readdirSync("./models").forEach(function(file){
     require("./models/" + file)
   });
+  app.get('/cs*', function(){
+    return this.coffee(this.request.env.pathInfo.substr(1));
+  });
   require("fs").readdirSync("./controllers").forEach(function(file){
     require("./controllers/" + file)
   });
