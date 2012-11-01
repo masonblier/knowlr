@@ -11,8 +11,9 @@ app.get '/objects/new', ->
 
 app.get '/objects/:id', ->
   @knowl = Knowl.first(_id: @route.id)
+  console.log @knowl
   @eco 'objects/show'
 
 app.post '/api/objects', ->
-  knowl = Knowl.create(name: @params.name, relations: @params.relations)
+  knowl = Knowl.create(name: @params.name, properties: @params.properties)
   @json knowl

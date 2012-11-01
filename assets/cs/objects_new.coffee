@@ -8,16 +8,16 @@ $ ->
     constructor: ()->
       @errors = ko.observable("")
       @name =  ko.observable("")
-      @relations =  ko.observableArray([])
+      @properties =  ko.observableArray([])
 
-    addRelation: =>
-      @relations.push(relation: "is_a", value: "thingy")
+    addProperty: =>
+      @properties.push(relation: "is_a", value: "thingy")
 
     save: (view, e) =>
       e.preventDefault()
       data = 
         name: @name()
-        relations: @relations()
+        properties: @properties()
       console.log data
       req = $.ajax(
         url: '/api/objects',

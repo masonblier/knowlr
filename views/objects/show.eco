@@ -9,7 +9,24 @@
   <h2><%= @knowl.name %></h2>
 </div>
 <div class="row">
-  <div class="span4 offset2">
-    <img src="http://placehold.it/280x300.png" alt="image" />
-  </div>
+  <% if @knowl.properties?: %>
+  <table class="table span12">
+    <thead>
+      <tr>
+        <th class="span2">Relation</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% for property in @knowl.properties: %>
+      <tr>
+        <td><%= property.relation %></td>
+        <td><%= property.value %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <% else: %>
+  <div class="span12 lead">No properties</div>
+  <% end %>
 </div>

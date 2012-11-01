@@ -12,7 +12,7 @@
       </div>
     </div>
     <hr />
-    <div class="js-relation-list" data-bind="foreach: relations">
+    <div class="js-property-list" data-bind="foreach: properties">
       <div class="control-group">
         <label for="inputRel" class="control-label" data-bind="text: relation"></label>
         <div class="controls">
@@ -22,7 +22,7 @@
     </div>
     <div class="control-group">
       <div class="controls controls-row">
-        <button class="btn btn-success" data-bind="click: addRelation">
+        <button class="btn btn-success" data-bind="click: addProperty">
           <i class="icon-plus-sign icon-white"></i>
           Add
         </button>
