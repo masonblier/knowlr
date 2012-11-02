@@ -13,12 +13,14 @@ $ ->
     addProperty: =>
       @properties.push(relation: "is_a", value: "thingy")
 
+    is_valid: () => @is_name_valid()
+    is_name_valid: () => @name().length > 0
+
     save: (view, e) =>
       e.preventDefault()
       data = 
         name: @name()
         properties: @properties()
-      console.log data
       req = $.ajax(
         url: '/api/objects',
         type: 'POST',
@@ -29,6 +31,6 @@ $ ->
       req.done (data) ->
         window.location = '/objects/'+data._id
       req.fail (xhr, status, error) =>
-        @errors(error)
+        @errors(xhr.responseText)
 
   ko.applyBindings(new View())

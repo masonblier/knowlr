@@ -15,5 +15,11 @@ app.get '/objects/:id', ->
   @eco 'objects/show'
 
 app.post '/api/objects', ->
-  knowl = Knowl.create(name: @params.name, properties: @params.properties)
-  @json knowl
+  knowl = new Knowl(name: @params.name, properties: @params.properties)
+  if knowl.valid()
+    knowl.save()
+    @json knowl
+  else
+    @status = 422
+    errors = knowl.errors()
+    @body = ("#{field} #{errors[field]}" for field of errors).join "\n"

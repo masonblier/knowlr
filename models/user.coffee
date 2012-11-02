@@ -9,7 +9,7 @@ module.exports = class global.User extends Model
 
   @validate: (params, cb) =>
     errs = undefined
-    unless params?["name"]?.length > 0
+    if not params?["name"]?.length > 0
       (errs ?= {})["name"] = "Can't be blank"
     @errors = errs
     return !errs

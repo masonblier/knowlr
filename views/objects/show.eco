@@ -13,8 +13,8 @@
   <table class="table span12">
     <thead>
       <tr>
-        <th class="span2">Relation</th>
-        <th>Value</th>
+        <th class="span2">relation</th>
+        <th>value</th>
       </tr>
     </thead>
     <tbody>
