@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  color: #388497;
+  color: #36967c; /* 388497 */
 }
 a:hover {
   color: #28707b;
@@ -40,7 +40,7 @@ a:hover {
   margin-right: 5px;
 }
 .header .nav-pills li a.pill {
-  color: #83e3f1;
+  color: #75f0cb;
 }
 .header .nav-pills li a.pill:hover {
   background: rgba(256,256,256,0.08);
