@@ -3,6 +3,11 @@
 #
 
 $ ->
+  $(".dropdown").on "click", "input", (e)->
+    e.stopPropagation();
+    e.preventDefault();
+    false
+
   # Here's my data model
   class View
     constructor: ()->

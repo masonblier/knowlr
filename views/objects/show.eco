@@ -8,9 +8,9 @@
 <div class="span12 page-header">
   <h2><%= @knowl.name %></h2>
 </div>
-<div class="row">
+<div class="row span12">
   <% if @knowl.properties?: %>
-  <table class="table span12">
+  <table class="table">
     <thead>
       <tr>
         <th class="span2">relation</th>
@@ -27,6 +27,6 @@
     </tbody>
   </table>
   <% else: %>
-  <div class="span12 lead">No properties</div>
+  <div class="lead">No properties</div>
   <% end %>
 </div>

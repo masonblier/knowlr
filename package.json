@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "fibers":"latest",
-    "ace": "git://github.com/maccman/ace.git#master",
+    "ace": "git://github.com/masonblier/ace.git",
     "coffee-script": "latest",
     "eco": "latest",
     "mongo-model":"latest",

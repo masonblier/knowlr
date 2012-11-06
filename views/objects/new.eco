@@ -1,43 +1,54 @@
 <div class="row">
-  <form id="new_object_form" class="form-horizontal" method="post">
-    <legend>new Object</legend>
-    <div class="alert alert-error" data-bind="text: errors, visible: errors()"></div>
-    <div class="control-group" data-bind="css: { error: !is_name_valid() }">
-      <label for="inputName" class="control-label">name</label>
-      <div class="controls">
-        <input type="text" id="inputName" name="object_name" data-bind="value: name, valueUpdate: 'keyup'" />
-        <span class="help-inline">
-          required field
-        </span>
-      </div>
-    </div>
-    <hr />
-    <div class="js-property-list" data-bind="foreach: properties">
-      <div class="control-group">
-        <label for="inputRel" class="control-label" data-bind="text: relation"></label>
+  <div class="span12">
+    <form id="new_object_form" class="form-horizontal" method="post">
+      <legend>new Object</legend>
+      <div class="alert alert-error" data-bind="text: errors, visible: errors()"></div>
+      <div class="control-group" data-bind="css: { error: !is_name_valid() }">
+        <label for="inputName" class="control-label">name</label>
         <div class="controls">
-          <input type="text" id="inputRel" data-bind="value: value">
+          <input type="text" id="inputName" name="object_name" data-bind="value: name, valueUpdate: 'keyup'" />
+          <span class="help-inline">
+            required field
+          </span>
         </div>
       </div>
-    </div>
-    <div class="control-group">
-      <div class="controls controls-row">
-        <button class="btn btn-info" data-bind="click: addProperty">
-          <i class="icon-plus-sign icon-white"></i>
-          Add
-        </button>
+      <hr />
+      <div class="js-property-list" data-bind="foreach: properties">
+        <div class="control-group">
+          <label for="inputRel" class="control-label">
+            <div class="dropdown">
+            <a href="#" class="relation-edit"class=" dropdown-toggle" data-toggle="dropdown">
+              <i class="icon-chevron-down"></i> <span data-bind="text: relation"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><input class="js-relation-search" type="text" name="relation_search"></li>
+            </ul>
+            </div>
+          </label>
+          <div class="controls">
+            <input type="text" id="inputRel" data-bind="value: value">
+          </div>
+        </div>
       </div>
-    </div>
-    <hr />
-    <div class="control-group">
-      <div class="controls controls-row">
-        <button class="btn btn-success" data-bind="click: save, enable: is_valid()">
-          <i class="icon-ok-circle icon-white"></i>
-          Save
-        </button>
+      <div class="control-group">
+        <div class="controls controls-row">
+          <button class="btn btn-info" data-bind="click: addProperty">
+            <i class="icon-plus-sign icon-white"></i>
+            Add
+          </button>
+        </div>
       </div>
-    </div>
-  </form>
+      <hr />
+      <div class="control-group">
+        <div class="controls controls-row">
+          <button class="btn btn-success" data-bind="click: save, enable: is_valid()">
+            <i class="icon-ok-circle icon-white"></i>
+            Save
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 
 <script type="text/javascript" src="/cs/objects_new.coffee"></script>

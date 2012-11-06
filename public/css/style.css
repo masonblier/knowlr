@@ -96,6 +96,25 @@ a:hover {
   margin-top: 10px;
 }
 
+/* edit */
+
+.relation-edit {
+  padding: 8px 12px 8px 8px;
+  margin-right: -12px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+.relation-edit i {
+  visibility: hidden;
+}
+.relation-edit:hover {
+  text-decoration: none;
+  background: rgba(0,0,0,0.08);
+}
+.relation-edit:hover i {
+  visibility: visible;
+}
 
 /* footer */
 .footer {
