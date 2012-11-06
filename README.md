@@ -35,8 +35,10 @@ Getting Started
   password: admin
   ```
 
-
 License
 -------
 
-copyright 2012 knowlr all rights reserved
+knowlr is released under the MIT license:
+
+* http://www.opensource.org/licenses/MIT
+
